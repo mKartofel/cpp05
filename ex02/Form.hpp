@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 10:52:41 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/31 20:57:53 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:13:58 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Bureaucrat;
 
-class Form
+class Form //classe abstraite
 {
 private:
 	std::string const _name;
@@ -37,7 +37,7 @@ public:
 	int getGradeToSign(void) const;
 	int getGradeToExec(void) const;
 	void beSigned(Bureaucrat const &b);
-	virtual void execute(Bureaucrat const & executor) const = 0;
+	virtual void execute(Bureaucrat const & executor) const = 0; //fonction virtuelle pure 
 	void checkExecutable(Bureaucrat const & executor) const;
 
 	//exceptions
