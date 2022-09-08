@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 10:58:20 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/31 20:18:41 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/09/08 18:02:28 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Form::Form(Form const &f) : _name(f._name), _gradeToSign(f._gradeToSign), _grade
 
 Form & Form::operator=(Form const &f)
 {
-	_signed = f._signed;
+	if (this = &f)
+		_signed = f._signed;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 16:09:50 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/30 19:39:47 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/09/08 17:57:34 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &c)
 {
-	_grade = c._grade;
+	if (this != &c)
+		_grade = c._grade;
 	return *this;
 }
 

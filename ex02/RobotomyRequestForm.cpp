@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 13:14:47 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/08/08 14:26:08 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/09/08 18:03:02 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &r) :  Form("
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &r)
 {
-	_target = r._target;
+	if (this = &r)
+		_target = r._target;
 	return *this;
 }
 
