@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:31:04 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/09/08 18:02:51 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:48:32 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &r) 
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const &r)
 {
-	if (this = &r)
+	if (this != &r)
 		_target = r._target;
 	return *this;
 }

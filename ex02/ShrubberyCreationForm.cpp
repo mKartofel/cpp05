@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 19:46:35 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/09/08 18:03:16 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:48:40 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &s) :  
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const &s)
 {
-	if (this = &s)
+	if (this != &s)
 		_target = s._target;
 	return *this;
 }
